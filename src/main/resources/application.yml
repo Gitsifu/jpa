@@ -1,0 +1,11 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jpa?useUnicode=true&characterEncoding=utf-8&useSSL=true&verifyServerCertificate=false
+    username: root
+    password: sifu
