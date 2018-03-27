@@ -12,6 +12,8 @@ import javax.persistence.Id;
 import java.util.Date;
 
 /**
+ * lombok插件注解@Data等目前不支持jdk9
+ *
  * @author sifu
  * @date 2017/12/4
  * @version 1.0
