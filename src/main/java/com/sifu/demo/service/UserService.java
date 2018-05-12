@@ -1,6 +1,9 @@
 package com.sifu.demo.service;
 
 import com.sifu.demo.pojo.User;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @author sifu
@@ -15,5 +18,7 @@ public interface UserService {
      */
     User save(User user);
 
+    @Modifying
+    @Transactional
     User update(User user);
 }

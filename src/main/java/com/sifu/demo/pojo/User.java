@@ -1,14 +1,13 @@
 package com.sifu.demo.pojo;
 
 import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import javax.persistence.Entity;
-import javax.persistence.EntityListeners;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -43,12 +42,14 @@ public class User {
      * 创建时间
      */
     @CreatedDate
+    @Column(updatable = false)
+    @CreationTimestamp
     private Date createTime;
 
     /**
      * 更新时间
      */
-    @LastModifiedDate
+    @UpdateTimestamp
     private Date updateTime;
 
 }
